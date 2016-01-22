@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |   Esc  |   ü  |   ö  |   ä  |   p  |   z  |      |           |      |   b  |   m  |   ,  |   .  |   j  |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |      |      |      |      |      |                                       |      |      |      |      |      |
+ *   |      |      |      |      | Prog |                                       | Prog |      |      |      |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        | Prog | Super|       | Super| Prog |
@@ -54,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,     DE_X,       DE_V,       DE_L,   DE_C,   DE_W,   KC_DELT,
         KC_BSPC,    DE_U,       DE_I,       DE_A,   DE_E,   DE_O,
         KC_TRNS,    DE_UE,      DE_OE,      DE_AE,  DE_P,   DE_Z,   KC_TRNS,
-        KC_ESC,    KC_TRNS,    KC_TRNS,    KC_TRNS,KC_TRNS,
+        KC_ESC,    KC_TRNS,    KC_TRNS,    KC_TRNS,MO(PROG),
                                                             MO(PROG),KC_LGUI,
                                                                      KC_LALT,
                                              LT(NAVI,KC_ENT),KC_LSFT,KC_LCTL,
@@ -63,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TRNS,     DE_K,     DE_H,     DE_G,     DE_F,     DE_Q,     DE_SS,
                      DE_S,     DE_N,     DE_R,     DE_T,     DE_D,     DE_Y,
         KC_TRNS,     DE_B,     DE_M,     DE_COMM,  DE_DOT,   DE_J,     KC_TRNS,
-                               KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+                               MO(PROG),  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
                      KC_LGUI,  MO(PROG),
                      KC_LALT,
                      KC_LCTL,  MO(SHFT), LT(NAVI,KC_SPC)
