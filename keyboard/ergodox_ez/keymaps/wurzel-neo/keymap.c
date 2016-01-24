@@ -228,11 +228,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |        |  F1  |  F2  |  F3  |  F4  |  F5  |      |           |      |  F6  |  F7  |  F8  |  F9  |  F10 |   F11  |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |        |      | Bcksp|  Up  |  Del |      |      |           |      |      |   7  |   8  |   9  |      |   F12  |
+ * |        |  Tab | Home |  Up  |  End | PgUp |      |           |      |      |   7  |   8  |   9  |      |   F12  |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        | Home | Left | Down | Right|  End |------|           |------|      |   4  |   5  |   6  |   ,  |        |
+ * |        | BckSp| Left | Down | Right|  Del |------|           |------|      |   4  |   5  |   6  |   ,  |        |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |  Esc |      |      | Enter|      |      |           |      |      |   1  |   2  |   3  |   .  |        |
+ * |        |  Esc |  App | Space| Enter|PgDown|      |           |      |      |   1  |   2  |   3  |   .  |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |      |      |      |      |      |                                       |   0  |      |      |      |      |
  *   `----------------------------------'                                       `----------------------------------'
@@ -247,9 +247,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Navigation Keys + Numpad
 [NAVI] = KEYMAP(
        KC_TRNS, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_BSPC, KC_UP,   KC_DELT, KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END,
-       KC_TRNS, KC_ESC,  KC_TRNS, KC_TRNS, KC_ENT,  KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TAB,  KC_HOME, KC_UP,   KC_END,  KC_PGUP, KC_TRNS,
+       KC_TRNS, KC_BSPC, KC_LEFT, KC_DOWN, KC_RGHT, KC_DELT,
+       KC_TRNS, KC_ESC,  KC_APP,  KC_SPC,  KC_ENT,  KC_PGDN, KC_TRNS,
        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                                            KC_TRNS, KC_TRNS,
                                                     KC_TRNS,
