@@ -4,14 +4,15 @@
 #include "keymap_extras/keymap_german.h"
 #include "keymap_extras/keymap_neo2.h"
 
-#define BASE 0 // default layer
+#define BASE 0 // default layer, based on Neo2 OS-Layout
 #define SHFT 1 // Shift layer
-#define PROG 2 // Coding symbols, like (){}<>[]_=-:;'"%+`
-#define NAVI 3 // Cursor keys (left) and num-block (right)
+#define DEDE 2
+#define PROG 3 // Coding symbols, like (){}<>[]_=-:;'"%+`
+#define NAVI 4 // Cursor keys (left) and num-block (right)
 //		MDIA   // Keyboard-Mouse + Media-keys (Play,Pause,etc.)
-#define LOGR 4 // lowercase greek letters
-#define UPGR 5 // uppercase greek letters
-#define MATH 6 // mathematical symbols, like ⇔ℝℚ
+#define LOGR 5 // lowercase greek letters
+#define UPGR 6 // uppercase greek letters
+#define MATH 7 // mathematical symbols, like ⇔ℝℚ
 
 //#define SYMB 1 // symbols
 //#define MDIA 2 // media keys
@@ -22,16 +23,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |   Esc  |   1  |   2  |   3  |   4  |   5  |      |           |      |   6  |   7  |   8  |   9  |   0  |        |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |   Tab  |   x  |   v  |   l  |   c  |   w  |  Del |           |      |   k  |   h  |   g  |   f  |   q  |    ß   |
+ * |   Tab  |   x  |   v  |   l  |   c  |   w  |  Del |           |  Ins |   k  |   h  |   g  |   f  |   q  |    ß   |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |  Bcksp |   u  |   i  |   a  |   e  |   o  |------|           |------|   s  |   n  |   r  |   t  |   d  |    y   |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |   Esc  |   ü  |   ö  |   ä  |   p  |   z  |      |           |      |   b  |   m  |   ,  |   .  |   j  |        |
+ * |        |   ü  |   ö  |   ä  |   p  |   z  |      |           |      |   b  |   m  |   ,  |   .  |   j  |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |      |      |      |      | Prog |                                       | Prog |      |      |      |      |
+ *   |      |   ^  |   `  |   ´  | Mod4 |                                       | Mod4 |   ´  |   `  |   ^  |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        | Prog | Super|       | Super| Prog |
+ *                                        | Mod3 | Super|       | Super| Mod3 |
  *                                 ,------+------+------|       |------+------+------.
  *                                 |      |      |  Alt |       |  Alt |      |      |
  *                                 | Enter| Shift|------|       |------| Shift| Space|
@@ -50,23 +51,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [BASE] = KEYMAP(  // layer 0 : default
         // left hand
-        KC_ESC,     KC_1,       KC_2,       KC_3,   KC_4,   KC_5,   KC_TRNS,
-        KC_TAB,     DE_X,       DE_V,       DE_L,   DE_C,   DE_W,   KC_DELT,
-        KC_BSPC,    DE_U,       DE_I,       DE_A,   DE_E,   DE_O,
-        KC_TRNS,    DE_UE,      DE_OE,      DE_AE,  DE_P,   DE_Z,   KC_TRNS,
-        KC_ESC,    KC_TRNS,    KC_TRNS,    KC_TRNS,MO(PROG),
-                                                            MO(PROG),KC_LGUI,
+        KC_ESC,     NEO_1,      NEO_2,      NEO_3,   NEO_4,   NEO_5,   KC_TRNS,
+        KC_TAB,     NEO_X,      NEO_V,      NEO_L,   NEO_C,   NEO_W,   KC_DELT,
+        KC_BSPC,    NEO_U,      NEO_I,      NEO_A,   NEO_E,   NEO_O,
+        KC_TRNS,    NEO_UE,     NEO_OE,     NEO_AE,  NEO_P,   NEO_Z,   KC_TRNS,
+        KC_TRNS,    NEO_CIRC,   NEO_GRV,    NEO_ACUT,NEO_L2_L,
+                                                            NEO_L1_L,KC_LGUI,
                                                                      KC_LALT,
                                              LT(NAVI,KC_ENT),KC_LSFT,KC_LCTL,
         // right hand
-        KC_TRNS,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_TRNS,
-        KC_TRNS,     DE_K,     DE_H,     DE_G,     DE_F,     DE_Q,     DE_SS,
-                     DE_S,     DE_N,     DE_R,     DE_T,     DE_D,     DE_Y,
-        KC_TRNS,     DE_B,     DE_M,     DE_COMM,  DE_DOT,   DE_J,     KC_TRNS,
-                               MO(PROG),  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
-                     KC_LGUI,  MO(PROG),
+        KC_TRNS,     NEO_6,     NEO_7,     NEO_8,     NEO_9,     NEO_0,     NEO_MINS,
+        KC_INS,      NEO_K,     NEO_H,     NEO_G,     NEO_F,     NEO_Q,     NEO_SS,
+                     NEO_S,     NEO_N,     NEO_R,     NEO_T,     NEO_D,     NEO_Y,
+        KC_TRNS,     NEO_B,     NEO_M,     NEO_COMM,  NEO_DOT,   NEO_J,     KC_TRNS,
+                                NEO_L2_R,  NEO_ACUT,  NEO_GRV,   NEO_CIRC,  KC_TRNS,
+                     KC_LGUI,  NEO_L1_R,
                      KC_LALT,
-                     KC_LCTL,  MO(SHFT), LT(NAVI,KC_SPC)
+                     KC_LCTL,  KC_RSFT, LT(NAVI,KC_SPC)
     ),
 
 /* Keymap 1: uppercase-letters layer (shift-layer)
@@ -91,30 +92,93 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 `--------------------'       `--------------------'
  *  Super=Gui (Win/Linux) or Cmd (Mac) ?
  */
+
+// [SHFT] = KEYMAP(  // layer 1 : uppercase letters
+//         // left hand
+//         KC_TRNS,       KC_TRNS,     KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,
+//         KC_TRNS,       S(NEO_X),     S(NEO_V),    S(NEO_L),    S(NEO_C),    S(NEO_W),    KC_TRNS,
+//         KC_TRNS,       S(NEO_U),     S(NEO_I),    S(NEO_A),    S(NEO_E),    S(NEO_O),
+//         KC_TRNS,       S(NEO_UE),    S(NEO_OE),   S(NEO_AE),   S(NEO_P),    S(NEO_Z),    KC_TRNS,
+//         KC_TRNS,       KC_TRNS,     KC_TRNS,    KC_TRNS,    KC_TRNS,
+//                                                             KC_TRNS,    KC_TRNS,
+//                                                                         KC_TRNS,
+//                                                 KC_TRNS,    KC_TRNS,    KC_TRNS,
+//         // right hand
+//         KC_TRNS,     KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,
+//         KC_TRNS,     S(NEO_K),    S(NEO_H),    S(NEO_G),    S(NEO_F),    S(NEO_Q),    S(NEO_SS),
+//                      S(NEO_S),    S(NEO_N),    S(NEO_R),    S(NEO_T),    S(NEO_D),    S(NEO_Y),
+//         KC_TRNS,     S(NEO_B),    S(NEO_M),    S(NEO_COMM), S(NEO_DOT),  S(NEO_J),    KC_TRNS,
+//                                KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+//                      KC_TRNS,  KC_TRNS,
+//                      KC_TRNS,
+//                      KC_TRNS,  KC_TRNS,  KC_TRNS
+//         ),
+
+[DEDE] = KEYMAP(  // Neo letters with Qwertz Keycodes
+        // left hand
+        KC_ESC,     KC_1,       KC_2,       KC_3,   KC_4,   KC_5,   KC_TRNS,
+        KC_TAB,     DE_X,      DE_V,      DE_L,   DE_C,   DE_W,   KC_DELT,
+        KC_BSPC,    DE_U,      DE_I,      DE_A,   DE_E,   DE_O,
+        KC_TRNS,    DE_UE,     DE_OE,     DE_AE,  DE_P,   DE_Z,   KC_TRNS,
+        KC_ESC,    KC_TRNS,    KC_TRNS,    KC_TRNS,MO(PROG),
+                                                            MO(PROG),KC_LGUI,
+                                                                     KC_LALT,
+                                             LT(NAVI,KC_ENT),KC_LSFT,KC_LCTL,
+        // right hand
+        KC_TRNS,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_TRNS,
+        KC_TRNS,     DE_K,     DE_H,     DE_G,     DE_F,     DE_Q,     DE_SS,
+                     DE_S,     DE_N,     DE_R,     DE_T,     DE_D,     DE_Y,
+        KC_TRNS,     DE_B,     DE_M,     DE_COMM,  DE_DOT,   DE_J,     KC_TRNS,
+                               MO(PROG),  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+                     KC_LGUI,  MO(PROG),
+                     KC_LALT,
+                     KC_LCTL,  MO(SHFT), LT(NAVI,KC_SPC)
+    ),
+
+
+/* Keymap 0: Basic layer
+ *
+ * ,--------------------------------------------------.           ,--------------------------------------------------.
+ * |   ^    |   1  |   2  |   3  |   4  |   5  | Play |           | Next |   6  |   7  |   8  |   9  |   0  |   ß    |
+ * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
+ * |  Del   |   Q  |   W  |   E  |   R  |   T  |  L1  |           |  L2  |   Z  |   U  |   I  |   O  |   P  |   Ü    |
+ * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+ * |  Caps  |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   Ö  |  Ä/L2  |
+ * |--------+------+------+------+------+------| Hyper|           | Meh  |------+------+------+------+------+--------|
+ * | LShift |   Y  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |-/Ctrl| RShift |
+ * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
+ *   | </L1 |#/Ctrl|   ´  |   -  |   +  |                                       | Right| Down |  Up  | Left | ~L1  |
+ *   `----------------------------------'                                       `----------------------------------'
+ *                                        ,-------------.       ,-------------.
+ *                                        | App  | LGui |       | Alt  |Ctrl/Esc|
+ *                                 ,------+------+------|       |------+--------+------.
+ *                                 |      |      | Home |       | PgUp |        |      |
+ *                                 | Space|Backsp|------|       |------|  Tab   |Enter |
+ *                                 |      |ace   | End  |       | PgDn |        |      |
+ *                                 `--------------------'       `----------------------'
+ */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
 // Otherwise, it needs KC_*
-
-
-[SHFT] = KEYMAP(  // layer 1 : uppercase letters
-        // left hand
-        KC_TRNS,       KC_TRNS,     KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,
-        KC_TRNS,       S(DE_X),     S(DE_V),    S(DE_L),    S(DE_C),    S(DE_W),    KC_TRNS,
-        KC_TRNS,       S(DE_U),     S(DE_I),    S(DE_A),    S(DE_E),    S(DE_O),
-        KC_TRNS,       S(DE_UE),    S(DE_OE),   S(DE_AE),   S(DE_P),    S(DE_Z),    KC_TRNS,
-        KC_TRNS,       KC_TRNS,     KC_TRNS,    KC_TRNS,    KC_TRNS,
-                                                            KC_TRNS,    KC_TRNS,
-                                                                        KC_TRNS,
-                                                KC_TRNS,    KC_TRNS,    KC_TRNS,
-        // right hand
-        KC_TRNS,     KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,
-        KC_TRNS,     S(DE_K),    S(DE_H),    S(DE_G),    S(DE_F),    S(DE_Q),    S(DE_SS),
-                     S(DE_S),    S(DE_N),    S(DE_R),    S(DE_T),    S(DE_D),    S(DE_Y),
-        KC_TRNS,     S(DE_B),    S(DE_M),    S(DE_COMM), S(DE_DOT),  S(DE_J),    KC_TRNS,
-                               KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
-                     KC_TRNS,  KC_TRNS,
-                     KC_TRNS,
-                     KC_TRNS,  KC_TRNS,  KC_TRNS
-        ),
+// [QWRZ] = KEYMAP(  // QWERTZ (german standard) characters with QWERTZ keycodes
+//         // left hand
+//         KC_CIRC,         KC_1,           KC_2,     KC_3,     KC_4,     KC_5,   KC_MPLY,
+//         KC_DELT,         DE_Q,           DE_W,     DE_E,     DE_R,     DE_T,   TG(1),
+//         KC_CAPS,         DE_A,           DE_S,     DE_D,     DE_F,     DE_G,
+//         KC_LSFT,         DE_Y,           DE_X,     DE_C,     DE_V,     DE_B,   ALL_T(KC_NO),
+//         LT(SYMB,DE_LESS),CTL_T(DE_HASH), DE_ACUT,  DE_MINS,  DE_PLUS,
+//                                                ALT_T(KC_APP), KC_LGUI,
+//                                                               KC_HOME,
+//                                                KC_SPC,KC_BSPC,KC_END,
+//         // right hand
+//         KC_MNXT,     KC_6,   KC_7,    KC_8,    KC_9,   KC_0,             KC_MINS,
+//         TG(2),       DE_Z,   DE_U,    DE_I,    DE_O,   DE_P,             DE_UE,
+//                      DE_H,   DE_J,    DE_K,    DE_L,   DE_OE,            LT(MDIA,DE_AE),
+//         MEH_T(KC_NO),DE_N,   DE_M,    KC_COMM, KC_DOT, CTL_T(DE_MINS),   KC_RSFT,
+//                              KC_LEFT, KC_DOWN, KC_UP,  KC_RGHT,          KC_FN1,
+//         KC_LALT,CTL_T(KC_ESC),
+//         KC_PGUP,
+//         KC_PGDN,KC_TAB, KC_ENT
+//     ),
 
 /* Keymap 2: Programming Symbols Layer
  *
