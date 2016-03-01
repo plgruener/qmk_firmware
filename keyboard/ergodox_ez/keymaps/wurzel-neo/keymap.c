@@ -23,9 +23,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |   Esc  |   1  |   2  |   3  |   4  |   5  |      |           |      |   6  |   7  |   8  |   9  |   0  |        |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |   Tab  |   x  |   v  |   l  |   c  |   w  |  Del |           |  Ins |   k  |   h  |   g  |   f  |   q  |    ß   |
+ * |    y   |   x  |   v  |   l  |   c  |   w  |  Del |           |  Ins |   k  |   h  |   g  |   f  |   q  |    ß   |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |  Bcksp |   u  |   i  |   a  |   e  |   o  |------|           |------|   s  |   n  |   r  |   t  |   d  |    y   |
+ * |   Tab  |   u  |   i  |   a  |   e  |   o  |------|           |------|   s  |   n  |   r  |   t  |   d  |    y   |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |        |   ü  |   ö  |   ä  |   p  |   z  |      |           |      |   b  |   m  |   ,  |   .  |   j  |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
@@ -52,8 +52,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = KEYMAP(  // layer 0 : default
         // left hand
         KC_ESC,     NEO_1,      NEO_2,      NEO_3,   NEO_4,   NEO_5,   KC_TRNS,
-        KC_TAB,     NEO_X,      NEO_V,      NEO_L,   NEO_C,   NEO_W,   KC_DELT,
-        KC_BSPC,    NEO_U,      NEO_I,      NEO_A,   NEO_E,   NEO_O,
+        NEO_Y,      NEO_X,      NEO_V,      NEO_L,   NEO_C,   NEO_W,   KC_DELT,
+        KC_TAB,     NEO_U,      NEO_I,      NEO_A,   NEO_E,   NEO_O,
         KC_TRNS,    NEO_UE,     NEO_OE,     NEO_AE,  NEO_P,   NEO_Z,   KC_TRNS,
         KC_TRNS,    NEO_CIRC,   NEO_GRV,    NEO_ACUT,NEO_L2_L,
                                                              KC_LCTL,KC_LGUI,
