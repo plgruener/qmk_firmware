@@ -32,11 +32,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *   |      |   ^  |   `  |   ´  | Mod4 |                                       | Mod4 |   ´  |   `  |   ^  |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        | Mod3 | Super|       | Super| Mod3 |
+ *                                        | Ctrl | Super|       | Super| Ctrl |
  *                                 ,------+------+------|       |------+------+------.
  *                                 |      |      |  Alt |       |  Alt |      |      |
  *                                 | Enter| Shift|------|       |------| Shift| Space|
- *                                 |  Nav |      | Ctrl |       | Ctrl |      |  Nav |
+ *                                 |  Nav |      | Mod3 |       | Mod3 |      |  Nav |
  *                                 `--------------------'       `--------------------'
  *  Super=Gui (Win/Linux) or Cmd (Mac) ?
  */
@@ -56,18 +56,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_BSPC,    NEO_U,      NEO_I,      NEO_A,   NEO_E,   NEO_O,
         KC_TRNS,    NEO_UE,     NEO_OE,     NEO_AE,  NEO_P,   NEO_Z,   KC_TRNS,
         KC_TRNS,    NEO_CIRC,   NEO_GRV,    NEO_ACUT,NEO_L2_L,
-                                                            NEO_L1_L,KC_LGUI,
+                                                             KC_LCTL,KC_LGUI,
                                                                      KC_LALT,
-                                             LT(NAVI,KC_ENT),KC_LSFT,KC_LCTL,
+                                             LT(NAVI,KC_ENT),KC_LSFT,NEO_L1_L,
         // right hand
         KC_TRNS,     NEO_6,     NEO_7,     NEO_8,     NEO_9,     NEO_0,     NEO_MINS,
         KC_INS,      NEO_K,     NEO_H,     NEO_G,     NEO_F,     NEO_Q,     NEO_SS,
                      NEO_S,     NEO_N,     NEO_R,     NEO_T,     NEO_D,     NEO_Y,
         KC_TRNS,     NEO_B,     NEO_M,     NEO_COMM,  NEO_DOT,   NEO_J,     KC_TRNS,
                                 NEO_L2_R,  NEO_ACUT,  NEO_GRV,   NEO_CIRC,  KC_TRNS,
-                     KC_LGUI,  NEO_L1_R,
+                     KC_LGUI,  KC_LCTL,
                      KC_LALT,
-                     KC_LCTL,  KC_RSFT, LT(NAVI,KC_SPC)
+                     NEO_L1_R,  KC_RSFT, LT(NAVI,KC_SPC)
     ),
 
 /* Keymap 1: uppercase-letters layer (shift-layer)
