@@ -4,7 +4,7 @@
 #include "keymap_extras/keymap_neo2.h"
 
 #define BASE 0 // default layer, based on Neo2 OS-Layout
-
+#define QWRZ 2 // German QWERTZ layer (mimic ISO keyboard where possible)
 #define NAVI 4 // Cursor keys (left) and num-block (right)
 
 
@@ -52,6 +52,49 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                      KC_LALT,
                      NEO_L1_R,  KC_RSFT, LT(NAVI,KC_SPC)
     ),
+
+
+/* Layer 0: default
+ * ┌───────┬─────┬─────┬─────┬─────┬─────┬─────┐     ┌─────┬─────┬─────┬─────┬─────┬─────┬───────┐
+ * │  ESC  │  1  │  2  │  3  │  4  │  5  │     │     │     │  6  │  7  │  8  │  9  │  0  │   ß   │
+ * ├───────┼─────┼─────┼─────┼─────┼─────┼─────┤     ├─────┼─────┼─────┼─────┼─────┼─────┼───────┤
+ * │  Tab  │  q  │  w  │  e  │  r  │  t  │     │     │     │  z  │  u  │  i  │  o  │  p  │  ü    │
+ * ├───────┼─────┼─────┼─────╆─────╅─────┤     │     │     ├─────╆─────╅─────┼─────┼─────┼───────┤
+ * │  Caps │  a  │  s  │  d  │  f  │  g  ├─────┤     ├─────┤  h  │  j  │  k  │  l  │  ö  │  ä    │
+ * ├───────┼─────┼─────┼─────╄─────╃─────┤     │     │     ├─────╄─────╃─────┼─────┼─────┼───────┤
+ * │ LShift│  y  │  x  │  c  │  v  │  b  │     │     │     │  n  │  m  │  ,  │  .  │  -  │RShift │
+ * └─┬─────┼─────┼─────┼─────┼─────┼─────┴─────┘     └─────┴─────┼─────┼─────┼─────┼─────┼─────┬─┘
+ *   │     │     │     │     │     │                             │     │     │     │     │     │
+ *   └─────┴─────┴─────┴─────┴─────┘ ┌─────┬─────┐ ┌─────┬─────┐ └─────┴─────┴─────┴─────┴─────┘
+ *                                   │     │     │ │     │     │
+ *                             ┌─────┼─────┼─────┤ ├─────┼─────┼─────┐
+ *                             │     │     │     │ │     │     │     │
+ *                             │     │     ├─────┤ ├─────┤     │     │
+ *                             │     │     │     │ │     │     │     │
+ *                             └─────┴─────┴─────┘ └─────┴─────┴─────┘
+ */
+
+[QWRZ] = KEYMAP(  // QWERTZ (german standard) characters with QWERTZ keycodes
+        // left hand
+        KC_ESC,          KC_1,           KC_2,     KC_3,     KC_4,     KC_5,   KC_NO,
+        KC_TAB,          DE_Q,           DE_W,     DE_E,     DE_R,     DE_T,   KC_NO,
+        KC_CAPS,         DE_A,           DE_S,     DE_D,     DE_F,     DE_G,
+        KC_LSFT,         DE_Y,           DE_X,     DE_C,     DE_V,     DE_B,   KC_NO,
+        KC_NO,           KC_NO,          KC_NO,    KC_NO,    KC_NO,
+                                                       KC_NO, KC_NO,
+                                                              KC_NO,
+                                                KC_NO, KC_NO, KC_NO,
+        // right hand
+        KC_NO,       KC_6,   KC_7,    KC_8,    KC_9,   KC_0,             DE_SS,
+        KC_NO,       DE_Z,   DE_U,    DE_I,    DE_O,   DE_P,             DE_UE,
+                     DE_H,   DE_J,    DE_K,    DE_L,   DE_OE,            DE_AE,
+        KC_NO,       DE_N,   DE_M,    KC_COMM, KC_DOT, DE_MINS,   KC_RSFT,
+                             KC_NO,   KC_NO,   KC_NO,  KC_NO,            KC_NO,
+        KC_NO, KC_NO,
+        KC_NO,
+        KC_NO, KC_NO, KC_NO
+    ),
+
 
 /* 
  * ┌───────┬─────┬─────┬─────┬─────┬─────┬─────┐     ┌─────┬─────┬─────┬─────┬─────┬─────┬───────┐
