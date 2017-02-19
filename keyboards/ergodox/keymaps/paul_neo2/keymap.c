@@ -64,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ├───────┼─────┼─────┼─────╄─────╃─────┤     │     │     ├─────╄─────╃─────┼─────┼─────┼───────┤
  * │ LShift│  y  │  x  │  c  │  v  │  b  │     │     │     │  n  │  m  │  ,  │  .  │  -  │RShift │
  * └─┬─────┼─────┼─────┼─────┼─────┼─────┴─────┘     └─────┴─────┼─────┼─────┼─────┼─────┼─────┬─┘
- *   │     │     │     │     │     │                             │     │     │     │     │     │
+ *   │LCtrl│     │     │     │     │                             │     │     │     │     │RCtrl│
  *   └─────┴─────┴─────┴─────┴─────┘ ┌─────┬─────┐ ┌─────┬─────┐ └─────┴─────┴─────┴─────┴─────┘
  *                                   │     │     │ │     │     │
  *                             ┌─────┼─────┼─────┤ ├─────┼─────┼─────┐
@@ -80,7 +80,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,          DE_Q,           DE_W,     DE_E,     DE_R,     DE_T,   KC_NO,
         KC_CAPS,         DE_A,           DE_S,     DE_D,     DE_F,     DE_G,
         KC_LSFT,         DE_Y,           DE_X,     DE_C,     DE_V,     DE_B,   KC_NO,
-        KC_NO,           KC_NO,          KC_NO,    KC_NO,    KC_NO,
+        KC_LCTL,         KC_NO,          KC_NO,    KC_NO,    KC_NO,
                                                        KC_NO, KC_NO,
                                                               KC_NO,
                                                 KC_NO, KC_NO, KC_NO,
@@ -89,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_NO,       DE_Z,   DE_U,    DE_I,    DE_O,   DE_P,             DE_UE,
                      DE_H,   DE_J,    DE_K,    DE_L,   DE_OE,            DE_AE,
         KC_NO,       DE_N,   DE_M,    KC_COMM, KC_DOT, DE_MINS,   KC_RSFT,
-                             KC_NO,   KC_NO,   KC_NO,  KC_NO,            KC_NO,
+                             KC_NO,   KC_NO,   KC_NO,  KC_NO,            KC_RCTL,
         KC_NO, KC_NO,
         KC_NO,
         KC_NO, KC_NO, KC_NO
