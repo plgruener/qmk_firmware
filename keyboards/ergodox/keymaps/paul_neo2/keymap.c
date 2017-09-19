@@ -24,8 +24,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                   │ CTRL│ WIN │ │ WIN │ CTRL│
  *                             ┌─────┼─────┼─────┤ ├─────┼─────┼─────┐
  *                             │     │     │ ALT │ │ ALT │     │     │
- *                             │Enter│Shift├─────┤ ├─────┤Shift│Space│
- *                             │>NAVI│     │Mod3 │ │Mod3 │     │>NAVI│
+ *                             │BCKSP│ TAB ├─────┤ ├─────┤Enter│Space│
+ *                             │>NAVI│Shift│Mod3 │ │Mod3 │Shift│>NAVI│
  *                             └─────┴─────┴─────┘ └─────┴─────┴─────┘
  */
 
@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TRNS,    NEO_CIRC,   NEO_GRV,    NEO_ACUT,NEO_L2_L,
                                                              KC_LCTL,KC_LGUI,
                                                                      KC_LALT,
-                                             LT(NAVI,KC_ENT),KC_LSFT,NEO_L1_L,
+                                            LT(NAVI,KC_BSPC),SFT_T(KC_TAB),NEO_L1_L,
         // right hand
         KC_F7,       KC_F8,     KC_F9,     KC_F10,    KC_F11,    KC_F12,    KC_TRNS,
         KC_INS,      NEO_K,     NEO_H,     NEO_G,     NEO_F,     NEO_Q,     NEO_SS,
@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 NEO_L2_R,  NEO_ACUT,  NEO_GRV,   NEO_CIRC,  KC_TRNS,
                      KC_LGUI,  KC_LCTL,
                      KC_LALT,
-                     NEO_L1_R,  KC_RSFT, LT(NAVI,KC_SPC)
+                     NEO_L1_R, SFT_T(KC_ENT), LT(NAVI,KC_SPC)
     ),
 
 
