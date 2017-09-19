@@ -1,4 +1,4 @@
-#include "ergodox.h"
+#include QMK_KEYBOARD_H
 #include "action_layer.h"
 #include "led.h"
 #include "keymap_extras/keymap_neo2.h"
@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_F7,       KC_F8,     KC_F9,     KC_F10,    KC_F11,    KC_F12,    KC_TRNS,
         KC_INS,      NEO_K,     NEO_H,     NEO_G,     NEO_F,     NEO_Q,     NEO_SS,
                      NEO_S,     NEO_N,     NEO_R,     NEO_T,     NEO_D,     NEO_Y,
-        KC_12,       NEO_B,     NEO_M,     NEO_COMM,  NEO_DOT,   NEO_J,     KC_TRNS,
+        KC_F12,      NEO_B,     NEO_M,     NEO_COMM,  NEO_DOT,   NEO_J,     KC_TRNS,
                                 NEO_L2_R,  NEO_ACUT,  NEO_GRV,   NEO_CIRC,  KC_TRNS,
                      KC_LGUI,  KC_LCTL,
                      KC_LALT,
