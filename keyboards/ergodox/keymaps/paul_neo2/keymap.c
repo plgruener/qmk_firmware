@@ -17,7 +17,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ├───────┼─────┼─────┼─────╆─────╅─────┤     │     │     ├─────╆─────╅─────┼─────┼─────┼───────┤
  * │  TAB  │  u  │  i  │  a  │  e  │  o  ├─────┤     ├─────┤  s  │  n  │  r  │  t  │  d  │  y    │
  * ├───────┼─────┼─────┼─────╄─────╃─────┤     │     │     ├─────╄─────╃─────┼─────┼─────┼───────┤
- * │       │  ü  │  ö  │  ä  │  p  │  z  │     │     │     │  b  │  m  │  ,  │  .  │  j  │       │
+ * │       │  ü  │  ö  │  ä  │  p  │  z  │ F11 │     │ F12 │  b  │  m  │  ,  │  .  │  j  │       │
  * └─┬─────┼─────┼─────┼─────┼─────┼─────┴─────┘     └─────┴─────┼─────┼─────┼─────┼─────┼─────┬─┘
  *   │     │  ^  │  `  │  ´  │ Mod4│                             │ Mod4│  ´  │  `  │  ^  │     │
  *   └─────┴─────┴─────┴─────┴─────┘ ┌─────┬─────┐ ┌─────┬─────┐ └─────┴─────┴─────┴─────┴─────┘
@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ESC,     KC_F1,      KC_F2,      KC_F3,   KC_F4,   KC_F5,   KC_F6,
         NEO_Y,      NEO_X,      NEO_V,      NEO_L,   NEO_C,   NEO_W,   KC_DELT,
         KC_TAB,     NEO_U,      NEO_I,      NEO_A,   NEO_E,   NEO_O,
-        KC_TRNS,    NEO_UE,     NEO_OE,     NEO_AE,  NEO_P,   NEO_Z,   KC_TRNS,
+        KC_TRNS,    NEO_UE,     NEO_OE,     NEO_AE,  NEO_P,   NEO_Z,   KC_F11,
         KC_TRNS,    NEO_CIRC,   NEO_GRV,    NEO_ACUT,NEO_L2_L,
                                                              KC_LCTL,KC_LGUI,
                                                                      KC_LALT,
@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_F7,       KC_F8,     KC_F9,     KC_F10,    KC_F11,    KC_F12,    KC_TRNS,
         KC_INS,      NEO_K,     NEO_H,     NEO_G,     NEO_F,     NEO_Q,     NEO_SS,
                      NEO_S,     NEO_N,     NEO_R,     NEO_T,     NEO_D,     NEO_Y,
-        KC_TRNS,     NEO_B,     NEO_M,     NEO_COMM,  NEO_DOT,   NEO_J,     KC_TRNS,
+        KC_12,       NEO_B,     NEO_M,     NEO_COMM,  NEO_DOT,   NEO_J,     KC_TRNS,
                                 NEO_L2_R,  NEO_ACUT,  NEO_GRV,   NEO_CIRC,  KC_TRNS,
                      KC_LGUI,  KC_LCTL,
                      KC_LALT,
